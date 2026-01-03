@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rondom Jokes</title>
+</head>
+<style>
+    body{
+    background-color: rgb(44, 43, 43);
+    margin: 0;
+    padding: 0;
+    color: antiquewhite;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.outer-flex{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-flex{
+    border: 1px solid white;
+    display : flex;
+    height: 500px;
+    width: 500px;
+    border-radius: 10px;  
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1); 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); 
+}
+
+button{
+    width: 200px;
+    background-color: aquamarine;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;  
+    font-size: 16px;  
+    transition: background-color 0.3s ease;  
+}
+
+button:hover{
+    background-color: lightseagreen;  
+}
+
+.blink-css {
+    animation: blinker 1s linear infinite; 
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0; 
+    }
+}
+
+</style>
+<body>
+    <div class="outer-flex">
+        <div class="inner-flex">
+            <button>Generate joke</button>
+            <h3 class="blink-css">Setup: <span id="getSetup"></span></h3>
+            <h4>Punchline: <span id="getPunchline"></span></h4>
+        </div>
+    </div>
+
+    <script src="./random_jokes.js"></script>
+</body>
+</html>
